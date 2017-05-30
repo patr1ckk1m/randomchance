@@ -2,7 +2,22 @@
   <head>
       <meta charset = "utf-8" />
       <script = "javascript">
-          
+          function playGame(quarters){
+            while (quarters>0){
+            quarters = quarters - 1;
+            var winchance = Math.trunc(Math.random()*100)+1;
+            if (winchance == 1){
+              var win = Math.trunc(Math.random()*50);
+              quarters = quarters + win
+              console.log(quarters);
+            }
+            if (quarters == 0){
+              return 0;
+              break
+            }
+          }
+        }
+        playGame(200);
       </script>
 
   </head>
